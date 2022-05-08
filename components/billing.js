@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, ScrollView, StyleSheet, Dimensions } from "react-native";
+import { View, Text, Image, ScrollView, StyleSheet, Dimensions, TouchableHighlight } from "react-native";
 import { Svg, Path } from "react-native-svg";
 
 import {
@@ -430,24 +430,11 @@ export default function Billing() {
                                         variant1_bottom={"auto"}
                                         variant1_transform={[{ translateX: 0 }, { translateY: 0 }, { rotate: "0deg" },]}
                                     />
-                                    <Component__Button
-                                        variant="variant63"
-                                        variant63_text1={"Details"}
-                                        variant63_height={32}
-                                        variant63_borderWidth={1}
-                                        variant63_borderStyle={"solid"}
-                                        variant63_borderColor={"rgba(0, 0, 0, 1)"}
-                                        variant63_left={573}
-                                        variant63_right={"auto"}
-                                        variant63_top={14}
-                                        variant63_bottom={"auto"}
-                                        variant63_transform={[{ translateX: 0 }, { translateY: 0 }, { rotate: "0deg" },]}
-                                        variant63_shadowColor={"rgb(0, 0, 0)"}
-                                        variant63_shadowOffset={{ width: 4, height: 4 }}
-                                        variant63_shadowOpacity={0.30000001192092896}
-                                        variant63_shadowRadius={4}
-                                        variant63_backgroundColor={"rgba(39, 112, 255, 1)"}
-                                    />
+                                    <TouchableHighlight
+                                        style={stylesheet._DetailsButton}
+                                    >
+                                        <Text style={stylesheet._DetailsButtonText}>Details</Text>
+                                    </TouchableHighlight>
                                     <View style={[stylesheet.___200, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
                                         <Text style={[stylesheet.___200, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
                                             $ 200
@@ -473,24 +460,11 @@ export default function Billing() {
                                         variant1_bottom={"auto"}
                                         variant1_transform={[{ translateX: 0 }, { translateY: 0 }, { rotate: "0deg" },]}
                                     />
-                                    <Component__Button
-                                        variant="variant63"
-                                        variant63_text1={"Details"}
-                                        variant63_height={32}
-                                        variant63_borderWidth={1}
-                                        variant63_borderStyle={"solid"}
-                                        variant63_borderColor={"rgba(0, 0, 0, 1)"}
-                                        variant63_left={573}
-                                        variant63_right={"auto"}
-                                        variant63_top={14}
-                                        variant63_bottom={"auto"}
-                                        variant63_transform={[{ translateX: 0 }, { translateY: 0 }, { rotate: "0deg" },]}
-                                        variant63_shadowColor={"rgb(0, 0, 0)"}
-                                        variant63_shadowOffset={{ width: 4, height: 4 }}
-                                        variant63_shadowOpacity={0.30000001192092896}
-                                        variant63_shadowRadius={4}
-                                        variant63_backgroundColor={"rgba(39, 112, 255, 1)"}
-                                    />
+                                    <TouchableHighlight
+                                        style={stylesheet._DetailsButton}
+                                    >
+                                        <Text style={stylesheet._DetailsButtonText}>Details</Text>
+                                    </TouchableHighlight>
                                     <View style={[stylesheet.___40, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
                                         <Text style={[stylesheet.___40, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
                                             $ 40
@@ -516,24 +490,11 @@ export default function Billing() {
                                         variant1_bottom={"auto"}
                                         variant1_transform={[{ translateX: 0 }, { translateY: 0 }, { rotate: "0deg" },]}
                                     />
-                                    <Component__Button
-                                        variant="variant63"
-                                        variant63_text1={"Details"}
-                                        variant63_height={32}
-                                        variant63_borderWidth={1}
-                                        variant63_borderStyle={"solid"}
-                                        variant63_borderColor={"rgba(0, 0, 0, 1)"}
-                                        variant63_left={573}
-                                        variant63_right={"auto"}
-                                        variant63_top={14}
-                                        variant63_bottom={"auto"}
-                                        variant63_transform={[{ translateX: 0 }, { translateY: 0 }, { rotate: "0deg" },]}
-                                        variant63_shadowColor={"rgb(0, 0, 0)"}
-                                        variant63_shadowOffset={{ width: 4, height: 4 }}
-                                        variant63_shadowOpacity={0.30000001192092896}
-                                        variant63_shadowRadius={4}
-                                        variant63_backgroundColor={"rgba(39, 112, 255, 1)"}
-                                    />
+                                    <TouchableHighlight
+                                        style={stylesheet._DetailsButton}
+                                    >
+                                        <Text style={stylesheet._DetailsButtonText}>Details</Text>
+                                    </TouchableHighlight>
                                     <View style={[stylesheet.___300, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
                                         <Text style={[stylesheet.___300, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
                                             $ 300
@@ -559,24 +520,11 @@ export default function Billing() {
                                         variant6_bottom={"auto"}
                                         variant6_transform={[{ translateX: 0 }, { translateY: 0 }, { rotate: "0deg" },]}
                                     />
-                                    <Component__Button
-                                        variant="variant63"
-                                        variant63_text1={"Details"}
-                                        variant63_height={32}
-                                        variant63_borderWidth={1}
-                                        variant63_borderStyle={"solid"}
-                                        variant63_borderColor={"rgba(0, 0, 0, 1)"}
-                                        variant63_left={573}
-                                        variant63_right={"auto"}
-                                        variant63_top={14}
-                                        variant63_bottom={"auto"}
-                                        variant63_transform={[{ translateX: 0 }, { translateY: 0 }, { rotate: "0deg" },]}
-                                        variant63_shadowColor={"rgb(0, 0, 0)"}
-                                        variant63_shadowOffset={{ width: 4, height: 4 }}
-                                        variant63_shadowOpacity={0.30000001192092896}
-                                        variant63_shadowRadius={4}
-                                        variant63_backgroundColor={"rgba(39, 112, 255, 1)"}
-                                    />
+                                    <TouchableHighlight
+                                        style={stylesheet._DetailsButton}
+                                    >
+                                        <Text style={stylesheet._DetailsButtonText}>Details</Text>
+                                    </TouchableHighlight>
                                     <View style={[stylesheet.___150, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
                                         <Text style={[stylesheet.___150, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
                                             $ 150
@@ -601,32 +549,17 @@ export default function Billing() {
                                             $ 450
                                         </Text>
                                     </View>
-                                    <View style={stylesheet._Pay_Button}>
-                                        <Component__Button
-                                            variant="variant63"
-                                            variant63_text1={"Pay"}
-                                            variant63_height={32}
-                                            variant63_borderWidth={1}
-                                            variant63_borderStyle={"solid"}
-                                            variant63_borderColor={"rgba(0, 0, 0, 1)"}
-                                            // variant63_left={932}
-                                            // variant63_right={20}
-                                            variant63_top={74}
-                                            variant63_bottom={"auto"}
-                                            variant63_transform={[{ translateX: 0 }, { translateY: 0 }, { rotate: "0deg" },]}
-                                            variant63_shadowColor={"rgb(0, 0, 0)"}
-                                            variant63_shadowOffset={{ width: 4, height: 4 }}
-                                            variant63_shadowOpacity={0.25}
-                                            variant63_shadowRadius={4}
-                                            variant63_backgroundColor={"rgba(39, 113, 255, 1)"}
-                                        />
-                                    </View>
+                                    <TouchableHighlight
+                                        style={[stylesheet._DetailsButton, stylesheet._Pay_Button]}
+                                    >
+                                        <Text style={stylesheet._DetailsButtonText}>Pay</Text>
+                                    </TouchableHighlight>
                                     <View style={stylesheet._Rectangle_10}>
-                                    </View>
-                                    <View style={[stylesheet._Credit_Card___Debit_Card___UPI, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
-                                        <Text style={[stylesheet._Credit_Card___Debit_Card___UPI, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
-                                            Credit Card / Debit Card / UPI
-                                        </Text>
+                                        <View style={[stylesheet._Credit_Card___Debit_Card___UPI, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
+                                            <Text style={[stylesheet._Credit_Card___Debit_Card___UPI, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
+                                                Credit Card / Debit Card / UPI
+                                            </Text>
+                                        </View>
                                     </View>
                                 </View>
                             </View>
@@ -5926,7 +5859,7 @@ const stylesheet = StyleSheet.create({
     },
     _Frame_32: {
         position: "absolute",
-        width: 1006,
+        width: Dimensions.get("window").width - 385,
         height: 112,
         borderRadius: 0,
         overflow: "hidden",
@@ -5995,10 +5928,8 @@ const stylesheet = StyleSheet.create({
         opacity: 1,
         borderWidth: 1,
         borderColor: "rgba(0, 0, 0, 1)",
-        left: 662,
-        right: "auto",
-        top: 74,
-        bottom: "auto",
+        right: 85,
+        bottom: 0,
         transform: [
             { translateX: 0 },
             { translateY: 0 },
@@ -6006,14 +5937,15 @@ const stylesheet = StyleSheet.create({
         ],
         backgroundColor: "rgba(255, 255, 255, 1)",
     },
+    _PaymentContainer: {
+        width: Dimensions.get("window").width
+    },
     _Credit_Card___Debit_Card___UPI: {
         position: "absolute",
         // width: "auto",
         height: "auto",
-        left: 670,
-        right: "auto",
-        top: 80,
-        bottom: "auto",
+        left: 6,
+        bottom: 6,
         transform: [
             { translateX: 0 },
             { translateY: 0 },
@@ -6125,6 +6057,43 @@ const stylesheet = StyleSheet.create({
         textAlignVertical: "top",
         letterSpacing: 0.1,
     },
+    _DetailsButton: {
+        width: 90,
+        height: 32,
+        left: 573,
+        top: 14,
+        color: "white",
+        fontFamily: "Montserrat",
+        fontWeight: "500",
+        borderWidth: 1,
+        borderStyle: "solid",
+        borderColor: "rgba(0, 0, 0, 1)",
+        shadowColor: "rgb(0, 0, 0)",
+        shadowOffset: { width: 4, height: 4 },
+        shadowOpacity: 0.30000001192092896,
+        shadowRadius: 4,
+        backgroundColor: "rgba(39, 112, 255, 1)",
+        borderRadius: 4,
+        elevation: 10,
+        alignItems: "center",
+        textAlignVertical: "center",
+        alignContent: "center",
+        justifyContent: "center",
+    },
+    _DetailsButtonText: {
+        color: "#FFF",
+        fontFamily: "Montserrat",
+        fontWeight: "400",
+        alignSelf: "center",
+    },
+    _Pay_Button: {
+        position: "absolute",
+        width: 64,
+        right: 0,
+        bottom: 0,
+        left: "auto",
+        top: "auto",
+    }
 });
 const component__checkbox_stylesheet = StyleSheet.create({
     _selected_unchecked__state_default: {
@@ -11095,12 +11064,6 @@ const component__Phosphor_icons___ArrowCircleRight_stylesheet = StyleSheet.creat
             { rotate: "0deg" },
         ],
     },
-    _Pay_Button: {
-        width: 100,
-        height: 100,
-        right: 0,
-        position: 'absolute'
-    }
 });
 
 const imageUrl_Ellipse = "https://randomuser.me/api/portraits/men/5.jpg"

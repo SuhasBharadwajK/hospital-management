@@ -8,15 +8,15 @@ const MainScreenStack = createStackNavigator({
     Dashboard: {
         screen: Dashboard,
         navigationOptions: {
-            headerShown: false
+            headerShown: false,
         }
     },
     Billing: {
         screen: Billing,
         navigationOptions: {
-            headerShown: false
+            headerShown: false,
         }
-    }
+    },
 });
 
 export default createAppContainer(MainScreenStack);
