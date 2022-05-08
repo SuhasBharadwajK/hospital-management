@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, Image, ScrollView, StyleSheet, Dimensions, TouchableHighlight } from "react-native";
 import { Svg, Path } from "react-native-svg";
+import moment from 'moment';
+import * as Battery from 'expo-battery';
 
 import {
     useFonts,
@@ -8,20 +10,30 @@ import {
 } from "@expo-google-fonts/dev";
 
 export default function Billing() {
+    const [date, setDate] = useState(null);
+    const [time, setTime] = useState(null);
+    const [batteryLevel, setBatteryLevel] = useState(null);
 
     let [fontsLoaded] = useFonts({
         'Montserrat': require('../assets/fonts/Montserrat-Regular.ttf'),
     });
 
-    // if (!fontsLoaded) {
-    //     return null;
-    // }
+    useEffect(() => {
+        const timer = setInterval(async () => {
+            setDate(moment().format('Do MMM, YYYY'));
+            setTime(moment().format('hh:mm A'));
+            const battery = await Battery.getBatteryLevelAsync();
+            setBatteryLevel(Math.round((battery * 100)) + '%');
+        }, 1000);
 
-    // return (
-    //     <View>
-    //         <Text>Suhas</Text>
-    //     </View>
-    // );
+        return () => {
+            clearInterval(timer);
+        }
+    }, []);
+
+    if (!fontsLoaded) {
+        return null;
+    }
 
     return (
         <ScrollView bounces={false} showsVerticalScrollIndicator={false} style={{ height: "100%" }}>
@@ -33,12 +45,12 @@ export default function Billing() {
                     </Image>
                     <View style={[stylesheet._10_37_AM, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
                         <Text style={[stylesheet._10_37_AM, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
-                            10:37 AM
+                            {time}
                         </Text>
                     </View>
                     <View style={[stylesheet._15th_Jan__2021, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
                         <Text style={[stylesheet._15th_Jan__2021, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
-                            15th Jan, 2021
+                            {date}
                         </Text>
                     </View>
                     <View style={[stylesheet._Room_No__437, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
@@ -173,8 +185,8 @@ export default function Billing() {
                     </Svg>
                 </View>
                 <View style={[stylesheet._55_, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
-                    <Text style={[stylesheet._55_, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
-                        55%
+                    <Text style={[stylesheet._55_, { position: "absolute", flexGrow: 1, right: -5, top: -2, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
+                        {batteryLevel}
                     </Text>
                 </View>
                 <View style={stylesheet._Rectangle_3}>
@@ -4100,7 +4112,7 @@ const stylesheet = StyleSheet.create({
         // width: "auto",
         height: "auto",
         right: 20,
-        top: 22.5,
+        top: 23,
         bottom: "auto",
         transform: [
             { translateX: 0 },
@@ -4110,7 +4122,7 @@ const stylesheet = StyleSheet.create({
         fontFamily: "Montserrat",
         fontWeight: "500",
         textDecorationLine: "none",
-        fontSize: 8,
+        fontSize: 10,
         color: "rgba(0, 0, 0, 1)",
         textAlign: "left",
         textAlignVertical: "top",
