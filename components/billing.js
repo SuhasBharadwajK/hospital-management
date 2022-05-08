@@ -13,13 +13,19 @@ export default function Billing() {
         'Montserrat': require('../assets/fonts/Montserrat-Regular.ttf'),
     });
 
-    if (!fontsLoaded) {
-        return null;
-    }
+    // if (!fontsLoaded) {
+    //     return null;
+    // }
+
+    // return (
+    //     <View>
+    //         <Text>Suhas</Text>
+    //     </View>
+    // );
 
     return (
-        <ScrollView bounces={false} showsVerticalScrollIndicator={false} style={{ height: Dimensions.get("window").height }}>
-            <View style={stylesheet._Tablet}>
+        <ScrollView bounces={false} showsVerticalScrollIndicator={false} style={{ height: "100%" }}>
+            <View style={stylesheet._Home}>
                 <View style={stylesheet._StatusBar}>
                     <View style={stylesheet._Rectangle_1}>
                     </View>
@@ -172,32 +178,30 @@ export default function Billing() {
                     </Text>
                 </View>
                 <View style={stylesheet._Rectangle_3}>
-                </View>
-                <View style={[stylesheet._Wipro_SATHI, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
-                    <Text style={[stylesheet._Wipro_SATHI, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
-                        Wipro SATHI
-                    </Text>
-                </View>
-                <View style={stylesheet._Rectangle_2}>
-                </View>
-                <View style={[stylesheet._Search, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
-                    <Text style={[stylesheet._Search, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
-                        Search
-                    </Text>
-                </View>
-                <View style={stylesheet._bx_search}>
-                    <Svg style={stylesheet._Vector_7} fill={"rgba(0, 0, 0, 1)"}>
-                        <Path fillRule={"nonzero"} d={"M 6 11.999996737483661 C 7.331232458353043 11.999723276875644 8.624103337526321 11.5540699540423 9.672750234603882 10.73399728767273 L 12.969749450683594 14.030996322631834 L 14.030250549316406 12.970496942835288 L 10.733250617980957 9.673497192620642 C 11.55375051498413 8.624745885115301 11.999679827189539 7.331576022998372 12 5.999998368741831 C 12.000000000000004 2.691749436977112 9.308249831199646 0 6 0 C 2.691750168800354 0 0 2.691749436977112 0 5.999998368741831 C 0 9.30824730050655 2.691750168800354 11.999996737483661 6 11.999996737483661 Z M 6 1.4999995921854576 C 8.481750011444092 1.4999995921854576 10.5 3.5182490320269024 10.5 5.999998368741831 C 10.5 8.481747705456758 8.481750011444092 10.499997145298204 6 10.499997145298204 C 3.518249988555908 10.499997145298204 1.5 8.481747705456758 1.5 5.999998368741831 C 1.5 3.5182490320269024 3.518249988555908 1.4999995921854576 6 1.4999995921854576 Z"} strokeLinejoin={"miter"} />
-                    </Svg>
-                </View>
-                <View style={stylesheet._fluent_mic_20_filled}>
-                    <Svg style={stylesheet._Vector_8} fill={"rgba(0, 0, 0, 1)"}>
-                        <Path fillRule={"nonzero"} d={"M 0.8499998612837358 6.800000190734863 C 0.8499998612837358 6.687283175257248 0.8052231789573677 6.579182437201486 0.7255202331273888 6.499479476128727 C 0.6458172872974098 6.419776515055967 0.5377169752268752 6.375000178813934 0.4249999813058077 6.375000178813934 C 0.31228298738474014 6.375000178813934 0.2041826753142056 6.419776515055967 0.12447972948422666 6.499479476128727 C 0.04477678365424771 6.579182437201486 4.639551629565866e-8 6.687283175257248 4.639551629565866e-8 6.800000190734863 C -0.00016419063587855208 7.9664264708105605 0.43571798843252274 9.090781508565826 1.2220616492053193 9.952299778666202 C 2.008405309978116 10.813818048766578 3.088403144124145 11.350261314812261 4.24999930641868 11.456300055456154 L 4.24999930641868 13.175000369548798 C 4.24999930641868 13.287717385026413 4.294775634097469 13.395818123082176 4.374478579927448 13.475521084154934 C 4.454181525757427 13.555224045227693 4.562282243139479 13.600000381469727 4.674999237060547 13.600000381469727 C 4.787716230981615 13.600000381469727 4.8958169483636675 13.555224045227693 4.9755198941936465 13.475521084154934 C 5.055222840023625 13.395818123082176 5.099999167702415 13.287717385026413 5.099999167702415 13.175000369548798 L 5.099999167702415 11.456300055456154 C 6.26159532999695 11.350261314812261 7.341593569454496 10.813818048766578 8.127937230227293 9.952299778666202 C 8.91428089100009 9.090781508565826 9.350162711152489 7.9664264708105605 9.349998474121094 6.800000190734863 C 9.349998474121094 6.687283175257248 9.305222146442304 6.579182437201486 9.225519200612325 6.499479476128727 C 9.145816254782346 6.419776515055967 9.037715537400294 6.375000178813934 8.924998543479226 6.375000178813934 C 8.81228154955816 6.375000178813934 8.704180832176107 6.419776515055967 8.624477886346128 6.499479476128727 C 8.544774940516149 6.579182437201486 8.49999861283736 6.687283175257248 8.49999861283736 6.800000190734863 C 8.499998620322302 7.30230634727355 8.401062425861173 7.799693996932753 8.208838219908516 8.263764374782454 C 8.01661401395586 8.727834752632155 7.73486594242941 9.149499278107083 7.379681908766295 9.504683379697326 C 7.0244978751031795 9.85986748128757 6.602833430269419 10.141615594030908 6.138763141170784 10.333839849411447 C 5.67469285207215 10.526064104791987 5.177305297535771 10.625000298023224 4.674999237060547 10.625000298023224 C 4.172693176585323 10.625000298023224 3.6753056220489437 10.526064104791987 3.2112353329503094 10.333839849411447 C 2.747165043851675 10.141615594030908 2.325500193706396 9.85986748128757 1.970316160043281 9.504683379697326 C 1.615132126380166 9.149499278107083 1.3333848654767528 8.727834752632155 1.1411606595240962 8.263764374782454 C 0.9489364535714395 7.799693996932753 0.8499998537987931 7.30230634727355 0.8499998612837358 6.800000190734863 L 0.8499998612837358 6.800000190734863 Z M 7.224998820911755 6.800000190734863 C 7.224998820911755 7.476302258268582 6.956339246258929 8.124905078022756 6.47812155861307 8.6031228571253 C 5.999903870967212 9.081340636227843 5.351301175254982 9.350000262260437 4.674999237060547 9.350000262260437 C 3.9986972988661114 9.350000262260437 3.3500950084654013 9.081340636227843 2.8718773208195425 8.6031228571253 C 2.3936596331736837 8.124905078022756 2.12499965320934 7.476302258268582 2.12499965320934 6.800000190734863 L 2.12499965320934 2.5500000715255737 C 2.12499965320934 1.873698003991855 2.3936596331736837 1.2250955895492766 2.8718773208195425 0.7468778104467333 C 3.3500950084654013 0.26866003134419003 3.9986972988661114 7.549516779209301e-16 4.674999237060547 0 C 5.351301175254982 3.7747583896046506e-16 5.999903870967212 0.26866003134419003 6.47812155861307 0.7468778104467333 C 6.956339246258929 1.2250955895492766 7.224998820911753 1.873698003991855 7.224998820911755 2.5500000715255737 L 7.224998820911755 6.800000190734863 Z"} strokeLinejoin={"miter"} />
-                    </Svg>
+                    <View style={[stylesheet._Wipro_SATHI, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
+                        <Text style={[stylesheet._Wipro_SATHI, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
+                            Wipro SATHI
+                        </Text>
+                    </View>
+                    <View style={stylesheet._Rectangle_2}>
+                    </View>
+                    <View style={[stylesheet._Search, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
+                        <Text style={[stylesheet._Search, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
+                            Search
+                        </Text>
+                    </View>
+                    <View style={stylesheet._bx_search}>
+                        <Svg style={stylesheet._Vector_7} fill={"rgba(0, 0, 0, 1)"}>
+                            <Path fillRule={"nonzero"} d={"M 6 11.999996737483661 C 7.331232458353043 11.999723276875644 8.624103337526321 11.5540699540423 9.672750234603882 10.73399728767273 L 12.969749450683594 14.030996322631834 L 14.030250549316406 12.970496942835288 L 10.733250617980957 9.673497192620642 C 11.55375051498413 8.624745885115301 11.999679827189539 7.331576022998372 12 5.999998368741831 C 12.000000000000004 2.691749436977112 9.308249831199646 0 6 0 C 2.691750168800354 0 0 2.691749436977112 0 5.999998368741831 C 0 9.30824730050655 2.691750168800354 11.999996737483661 6 11.999996737483661 Z M 6 1.4999995921854576 C 8.481750011444092 1.4999995921854576 10.5 3.5182490320269024 10.5 5.999998368741831 C 10.5 8.481747705456758 8.481750011444092 10.499997145298204 6 10.499997145298204 C 3.518249988555908 10.499997145298204 1.5 8.481747705456758 1.5 5.999998368741831 C 1.5 3.5182490320269024 3.518249988555908 1.4999995921854576 6 1.4999995921854576 Z"} strokeLinejoin={"miter"} />
+                        </Svg>
+                    </View>
+                    <View style={stylesheet._fluent_mic_20_filled}>
+                        <Svg style={stylesheet._Vector_8} fill={"rgba(0, 0, 0, 1)"}>
+                            <Path fillRule={"nonzero"} d={"M 0.8499998612837358 6.800000190734863 C 0.8499998612837358 6.687283175257248 0.8052231789573677 6.579182437201486 0.7255202331273888 6.499479476128727 C 0.6458172872974098 6.419776515055967 0.5377169752268752 6.375000178813934 0.4249999813058077 6.375000178813934 C 0.31228298738474014 6.375000178813934 0.2041826753142056 6.419776515055967 0.12447972948422666 6.499479476128727 C 0.04477678365424771 6.579182437201486 4.639551629565866e-8 6.687283175257248 4.639551629565866e-8 6.800000190734863 C -0.00016419063587855208 7.9664264708105605 0.43571798843252274 9.090781508565826 1.2220616492053193 9.952299778666202 C 2.008405309978116 10.813818048766578 3.088403144124145 11.350261314812261 4.24999930641868 11.456300055456154 L 4.24999930641868 13.175000369548798 C 4.24999930641868 13.287717385026413 4.294775634097469 13.395818123082176 4.374478579927448 13.475521084154934 C 4.454181525757427 13.555224045227693 4.562282243139479 13.600000381469727 4.674999237060547 13.600000381469727 C 4.787716230981615 13.600000381469727 4.8958169483636675 13.555224045227693 4.9755198941936465 13.475521084154934 C 5.055222840023625 13.395818123082176 5.099999167702415 13.287717385026413 5.099999167702415 13.175000369548798 L 5.099999167702415 11.456300055456154 C 6.26159532999695 11.350261314812261 7.341593569454496 10.813818048766578 8.127937230227293 9.952299778666202 C 8.91428089100009 9.090781508565826 9.350162711152489 7.9664264708105605 9.349998474121094 6.800000190734863 C 9.349998474121094 6.687283175257248 9.305222146442304 6.579182437201486 9.225519200612325 6.499479476128727 C 9.145816254782346 6.419776515055967 9.037715537400294 6.375000178813934 8.924998543479226 6.375000178813934 C 8.81228154955816 6.375000178813934 8.704180832176107 6.419776515055967 8.624477886346128 6.499479476128727 C 8.544774940516149 6.579182437201486 8.49999861283736 6.687283175257248 8.49999861283736 6.800000190734863 C 8.499998620322302 7.30230634727355 8.401062425861173 7.799693996932753 8.208838219908516 8.263764374782454 C 8.01661401395586 8.727834752632155 7.73486594242941 9.149499278107083 7.379681908766295 9.504683379697326 C 7.0244978751031795 9.85986748128757 6.602833430269419 10.141615594030908 6.138763141170784 10.333839849411447 C 5.67469285207215 10.526064104791987 5.177305297535771 10.625000298023224 4.674999237060547 10.625000298023224 C 4.172693176585323 10.625000298023224 3.6753056220489437 10.526064104791987 3.2112353329503094 10.333839849411447 C 2.747165043851675 10.141615594030908 2.325500193706396 9.85986748128757 1.970316160043281 9.504683379697326 C 1.615132126380166 9.149499278107083 1.3333848654767528 8.727834752632155 1.1411606595240962 8.263764374782454 C 0.9489364535714395 7.799693996932753 0.8499998537987931 7.30230634727355 0.8499998612837358 6.800000190734863 L 0.8499998612837358 6.800000190734863 Z M 7.224998820911755 6.800000190734863 C 7.224998820911755 7.476302258268582 6.956339246258929 8.124905078022756 6.47812155861307 8.6031228571253 C 5.999903870967212 9.081340636227843 5.351301175254982 9.350000262260437 4.674999237060547 9.350000262260437 C 3.9986972988661114 9.350000262260437 3.3500950084654013 9.081340636227843 2.8718773208195425 8.6031228571253 C 2.3936596331736837 8.124905078022756 2.12499965320934 7.476302258268582 2.12499965320934 6.800000190734863 L 2.12499965320934 2.5500000715255737 C 2.12499965320934 1.873698003991855 2.3936596331736837 1.2250955895492766 2.8718773208195425 0.7468778104467333 C 3.3500950084654013 0.26866003134419003 3.9986972988661114 7.549516779209301e-16 4.674999237060547 0 C 5.351301175254982 3.7747583896046506e-16 5.999903870967212 0.26866003134419003 6.47812155861307 0.7468778104467333 C 6.956339246258929 1.2250955895492766 7.224998820911753 1.873698003991855 7.224998820911755 2.5500000715255737 L 7.224998820911755 6.800000190734863 Z"} strokeLinejoin={"miter"} />
+                        </Svg>
+                    </View>
                 </View>
                 <View style={stylesheet._Frame_8}>
-                    <View style={stylesheet._Rectangle_4}>
-                    </View>
                     <View style={stylesheet._Rectangle_5}>
                     </View>
                     <View style={stylesheet._Rectangle_6}>
@@ -397,13 +401,13 @@ export default function Billing() {
                                             </Text>
                                         </View>
                                     </View>
-                                    <View style={stylesheet._Frame_27}>
+                                    {/* <View style={stylesheet._Frame_27}>
                                         <View style={[stylesheet._Others, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
                                             <Text style={[stylesheet._Others, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
                                                 Others
                                             </Text>
                                         </View>
-                                    </View>
+                                    </View> */}
                                     <View style={stylesheet._Frame_21}>
                                         <View style={[stylesheet._Scheduled, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
                                             <Text style={[stylesheet._Scheduled, { position: "relative", flexGrow: 1, left: 0, top: 0, height: "auto", transform: [{ translateX: 0 }, { translateY: 0 }], }]}>
@@ -597,24 +601,26 @@ export default function Billing() {
                                             $ 450
                                         </Text>
                                     </View>
-                                    <Component__Button
-                                        variant="variant63"
-                                        variant63_text1={"Pay"}
-                                        variant63_height={32}
-                                        variant63_borderWidth={1}
-                                        variant63_borderStyle={"solid"}
-                                        variant63_borderColor={"rgba(0, 0, 0, 1)"}
-                                        variant63_left={932}
-                                        variant63_right={"auto"}
-                                        variant63_top={74}
-                                        variant63_bottom={"auto"}
-                                        variant63_transform={[{ translateX: 0 }, { translateY: 0 }, { rotate: "0deg" },]}
-                                        variant63_shadowColor={"rgb(0, 0, 0)"}
-                                        variant63_shadowOffset={{ width: 4, height: 4 }}
-                                        variant63_shadowOpacity={0.25}
-                                        variant63_shadowRadius={4}
-                                        variant63_backgroundColor={"rgba(39, 113, 255, 1)"}
-                                    />
+                                    <View style={stylesheet._Pay_Button}>
+                                        <Component__Button
+                                            variant="variant63"
+                                            variant63_text1={"Pay"}
+                                            variant63_height={32}
+                                            variant63_borderWidth={1}
+                                            variant63_borderStyle={"solid"}
+                                            variant63_borderColor={"rgba(0, 0, 0, 1)"}
+                                            // variant63_left={932}
+                                            // variant63_right={20}
+                                            variant63_top={74}
+                                            variant63_bottom={"auto"}
+                                            variant63_transform={[{ translateX: 0 }, { translateY: 0 }, { rotate: "0deg" },]}
+                                            variant63_shadowColor={"rgb(0, 0, 0)"}
+                                            variant63_shadowOffset={{ width: 4, height: 4 }}
+                                            variant63_shadowOpacity={0.25}
+                                            variant63_shadowRadius={4}
+                                            variant63_backgroundColor={"rgba(39, 113, 255, 1)"}
+                                        />
+                                    </View>
                                     <View style={stylesheet._Rectangle_10}>
                                     </View>
                                     <View style={[stylesheet._Credit_Card___Debit_Card___UPI, { display: "flex", flexDirection: "row", alignItems: "center" }]}>
@@ -3317,7 +3323,7 @@ const stylesheet = StyleSheet.create({
     _Home: {
         position: "relative",
         width: Dimensions.get("window").width,
-        height: 825,
+        height: Dimensions.get("window").height,
         borderRadius: 0,
         overflow: "hidden",
         transform: [
@@ -3329,9 +3335,13 @@ const stylesheet = StyleSheet.create({
         left: 0,
         top: 0,
     },
+    _StatusBar: {
+        width: 'auto',
+        height: 'auto'
+    },
     _Rectangle_1: {
         position: "absolute",
-        width: "100%",
+        width: Dimensions.get("window").width,
         height: 55,
         borderRadius: 0,
         opacity: 1,
@@ -3435,9 +3445,8 @@ const stylesheet = StyleSheet.create({
         height: 11,
         borderRadius: 0,
         overflow: "hidden",
-        left: 1328,
-        right: "auto",
-        top: 22,
+        right: 40,
+        top: 23,
         bottom: "auto",
         transform: [
             { translateX: 0 },
@@ -3463,7 +3472,7 @@ const stylesheet = StyleSheet.create({
     _Frame_1: {
         position: "absolute",
         width: 276,
-        height: 730,
+        height: 710,
         borderRadius: 0,
         overflow: "hidden",
         left: 0,
@@ -4108,7 +4117,7 @@ const stylesheet = StyleSheet.create({
     _Line_1: {
         position: "absolute",
         width: 1,
-        height: 730,
+        height: 710,
         borderRadius: undefined,
         borderWidth: 2,
         // borderStyle: "solid",
@@ -4129,8 +4138,7 @@ const stylesheet = StyleSheet.create({
         height: 24,
         borderRadius: 0,
         overflow: "hidden",
-        left: 1284,
-        right: "auto",
+        right: 75,
         top: 15,
         bottom: "auto",
         transform: [
@@ -4158,9 +4166,8 @@ const stylesheet = StyleSheet.create({
         position: "absolute",
         // width: "auto",
         height: "auto",
-        left: 1355,
-        right: "auto",
-        top: 22,
+        right: 20,
+        top: 22.5,
         bottom: "auto",
         transform: [
             { translateX: 0 },
@@ -4178,7 +4185,7 @@ const stylesheet = StyleSheet.create({
     },
     _Rectangle_3: {
         position: "absolute",
-        width: "100%",
+        width: Dimensions.get("window").width,
         height: 40,
         borderRadius: 0,
         opacity: 1,
@@ -4199,15 +4206,15 @@ const stylesheet = StyleSheet.create({
         height: "auto",
         left: 23,
         right: "auto",
-        top: 64,
+        top: 6,
         bottom: "auto",
-        transform: [
-            { translateX: 0 },
-            { translateY: 0 },
-            { rotate: "0deg" },
-        ],
+        // transform: [
+        //     { translateX: 0 },
+        //     { translateY: 0 },
+        //     { rotate: "0deg" },
+        // ],
         fontFamily: "Montserrat",
-        fontWeight: "700",
+        fontWeight: "600",
         textDecorationLine: "none",
         fontSize: 18,
         color: "rgba(0, 0, 0, 1)",
@@ -4223,9 +4230,9 @@ const stylesheet = StyleSheet.create({
         opacity: 1,
         borderWidth: 1,
         borderColor: "rgba(0, 0, 0, 1)",
-        left: 1089,
-        right: "auto",
-        top: 60,
+        // left: 1089,
+        right: 20,
+        top: 5,
         bottom: "auto",
         transform: [
             { translateX: 0 },
@@ -4238,9 +4245,9 @@ const stylesheet = StyleSheet.create({
         position: "absolute",
         // width: "auto",
         height: "auto",
-        left: 1123,
-        right: "auto",
-        top: 66,
+        // left: 1123,
+        right: 200,
+        top: 10,
         bottom: "auto",
         transform: [
             { translateX: 0 },
@@ -4262,9 +4269,9 @@ const stylesheet = StyleSheet.create({
         height: 18,
         borderRadius: 0,
         overflow: "hidden",
-        left: 1095,
-        right: "auto",
-        top: 66,
+        // left: 1095,
+        right: 270,
+        top: 10,
         bottom: "auto",
         transform: [
             { translateX: 0 },
@@ -4293,9 +4300,9 @@ const stylesheet = StyleSheet.create({
         height: 17,
         borderRadius: 0,
         overflow: "hidden",
-        left: 1343,
-        right: "auto",
-        top: 67,
+        // left: 1343,
+        right: 30,
+        top: 10,
         bottom: "auto",
         transform: [
             { translateX: 0 },
@@ -4320,24 +4327,24 @@ const stylesheet = StyleSheet.create({
     },
     _Frame_8: {
         position: "absolute",
-        width: 1103,
+        width: (Dimensions.get("window").width),
         height: 101,
         borderRadius: 0,
         overflow: "hidden",
         left: 278,
         right: "auto",
-        top: 724,
+        top: 704,
         bottom: "auto",
         transform: [
             { translateX: 0 },
             { translateY: 0 },
             { rotate: "0deg" },
         ],
-        backgroundColor: "rgba(0,0,0,0)",
+        backgroundColor: "rgba(224, 232, 255, 1)",
     },
     _Rectangle_4: {
         position: "absolute",
-        width: 1103,
+        width: "100%",
         height: 101,
         borderRadius: 0,
         opacity: 1,
@@ -4848,15 +4855,15 @@ const stylesheet = StyleSheet.create({
         height: 81,
         borderRadius: 0,
         overflow: "hidden",
-        left: 997,
-        right: "auto",
+        left: Dimensions.get("window").width - 380,
+        // right: 10,
         top: 13,
         bottom: "auto",
-        transform: [
-            { translateX: 0 },
-            { translateY: 0 },
-            { rotate: "0deg" },
-        ],
+        // transform: [
+        //     { translateX: 0 },
+        //     { translateY: 0 },
+        //     { rotate: "0deg" },
+        // ],
         backgroundColor: "rgba(0,0,0,0)",
     },
     _Ellipse_4: {
@@ -4965,8 +4972,8 @@ const stylesheet = StyleSheet.create({
     },
     _Frame_9: {
         position: "absolute",
-        width: 1103,
-        height: 629,
+        width: Dimensions.get("window").width,
+        height: 608,
         borderRadius: 0,
         overflow: "hidden",
         left: 278,
@@ -4978,11 +4985,11 @@ const stylesheet = StyleSheet.create({
             { translateY: 0 },
             { rotate: "0deg" },
         ],
-        backgroundColor: "rgba(247, 247, 247, 1)",
+        backgroundColor: "rgba(240, 141, 19, 0.10000000149011612)",
     },
     _Billing_Details: {
         position: "absolute",
-        width: 1103,
+        width: Dimensions.get("window").width - 280,
         height: 597,
         borderRadius: 0,
         overflow: "hidden",
@@ -5003,8 +5010,8 @@ const stylesheet = StyleSheet.create({
         height: 70,
         borderRadius: 0,
         overflow: "hidden",
-        left: 1011,
-        right: "auto",
+        // left: 1011,
+        right: 20,
         top: 0,
         bottom: "auto",
         transform: [
@@ -5212,8 +5219,9 @@ const stylesheet = StyleSheet.create({
     },
     _Frame_19: {
         position: "absolute",
-        width: 1048,
-        height: 455,
+        width: Dimensions.get("window").width - 340,
+        // height: 430,
+        height: 460,
         borderRadius: 0,
         overflow: "hidden",
         borderWidth: 1,
@@ -5221,7 +5229,7 @@ const stylesheet = StyleSheet.create({
         borderColor: "rgba(0, 0, 0, 1)",
         left: 28,
         right: "auto",
-        top: 142,
+        top: 110,
         bottom: "auto",
         transform: [
             { translateX: 0 },
@@ -5232,7 +5240,7 @@ const stylesheet = StyleSheet.create({
     },
     _Frame_20: {
         position: "absolute",
-        width: 1027,
+        width: Dimensions.get("window").width - 360,
         height: 42,
         borderRadius: 0,
         overflow: "hidden",
@@ -5269,30 +5277,30 @@ const stylesheet = StyleSheet.create({
     },
     _Doctor: {
         position: "absolute",
-        // width: "auto",
-        height: "auto",
-        left: 48,
-        right: "auto",
-        top: 8,
-        bottom: "auto",
-        transform: [
-            { translateX: 0 },
-            { translateY: 0 },
-            { rotate: "0deg" },
-        ],
+        width: "100%",
+        height: "100%",
+        // left: 23,
+        // right: "auto",
+        // top: 9,
+        // bottom: "auto",
+        // transform: [
+        //     { translateX: 0 },
+        //     { translateY: 0 },
+        //     { rotate: "0deg" },
+        // ],
         fontFamily: "Montserrat",
         fontWeight: "400",
         textDecorationLine: "none",
         lineHeight: 24,
         fontSize: 16,
         color: "rgba(0, 0, 0, 1)",
-        textAlign: "left",
+        textAlign: "center",
         textAlignVertical: "top",
         letterSpacing: 0.1,
     },
     _Frame_23: {
         position: "absolute",
-        width: 147,
+        width: 145,
         height: 42,
         borderRadius: 0,
         overflow: "hidden",
@@ -5309,30 +5317,30 @@ const stylesheet = StyleSheet.create({
     },
     _Housekeeping: {
         position: "absolute",
-        // width: "auto",
-        height: "auto",
-        left: 21,
-        right: "auto",
-        top: 9,
-        bottom: "auto",
-        transform: [
-            { translateX: 0 },
-            { translateY: 0 },
-            { rotate: "0deg" },
-        ],
+        width: "100%",
+        height: "100%",
+        // left: 23,
+        // right: "auto",
+        // top: 9,
+        // bottom: "auto",
+        // transform: [
+        //     { translateX: 0 },
+        //     { translateY: 0 },
+        //     { rotate: "0deg" },
+        // ],
         fontFamily: "Montserrat",
         fontWeight: "400",
         textDecorationLine: "none",
         lineHeight: 24,
         fontSize: 16,
         color: "rgba(0, 0, 0, 1)",
-        textAlign: "left",
+        textAlign: "center",
         textAlignVertical: "top",
         letterSpacing: 0.1,
     },
     _Frame_24: {
         position: "absolute",
-        width: 146,
+        width: 145,
         height: 42,
         borderRadius: 0,
         overflow: "hidden",
@@ -5349,30 +5357,30 @@ const stylesheet = StyleSheet.create({
     },
     _Pharmacy: {
         position: "absolute",
-        // width: "auto",
-        height: "auto",
-        left: 36,
-        right: "auto",
-        top: 9,
-        bottom: "auto",
-        transform: [
-            { translateX: 0 },
-            { translateY: 0 },
-            { rotate: "0deg" },
-        ],
+        width: "100%",
+        height: "100%",
+        // left: 23,
+        // right: "auto",
+        // top: 9,
+        // bottom: "auto",
+        // transform: [
+        //     { translateX: 0 },
+        //     { translateY: 0 },
+        //     { rotate: "0deg" },
+        // ],
         fontFamily: "Montserrat",
         fontWeight: "400",
         textDecorationLine: "none",
         lineHeight: 24,
         fontSize: 16,
         color: "rgba(0, 0, 0, 1)",
-        textAlign: "left",
+        textAlign: "center",
         textAlignVertical: "top",
         letterSpacing: 0.1,
     },
     _Frame_25: {
         position: "absolute",
-        width: 148,
+        width: 145,
         height: 42,
         borderRadius: 0,
         overflow: "hidden",
@@ -5389,24 +5397,24 @@ const stylesheet = StyleSheet.create({
     },
     _Cafeteria: {
         position: "absolute",
-        // width: "auto",
-        height: "auto",
-        left: 41,
-        right: "auto",
-        top: 9,
-        bottom: "auto",
-        transform: [
-            { translateX: 0 },
-            { translateY: 0 },
-            { rotate: "0deg" },
-        ],
+        width: "100%",
+        height: "100%",
+        // left: 23,
+        // right: "auto",
+        // top: 9,
+        // bottom: "auto",
+        // transform: [
+        //     { translateX: 0 },
+        //     { translateY: 0 },
+        //     { rotate: "0deg" },
+        // ],
         fontFamily: "Montserrat",
         fontWeight: "400",
         textDecorationLine: "none",
         lineHeight: 24,
         fontSize: 16,
         color: "rgba(0, 0, 0, 1)",
-        textAlign: "left",
+        textAlign: "center",
         textAlignVertical: "top",
         letterSpacing: 0.1,
     },
@@ -5429,30 +5437,30 @@ const stylesheet = StyleSheet.create({
     },
     _Subscriptions: {
         position: "absolute",
-        // width: "auto",
-        height: "auto",
-        left: 23,
-        right: "auto",
-        top: 9,
-        bottom: "auto",
-        transform: [
-            { translateX: 0 },
-            { translateY: 0 },
-            { rotate: "0deg" },
-        ],
+        width: "100%",
+        height: "100%",
+        // left: 23,
+        // right: "auto",
+        // top: 9,
+        // bottom: "auto",
+        // transform: [
+        //     { translateX: 0 },
+        //     { translateY: 0 },
+        //     { rotate: "0deg" },
+        // ],
         fontFamily: "Montserrat",
         fontWeight: "400",
         textDecorationLine: "none",
         lineHeight: 24,
         fontSize: 16,
         color: "rgba(0, 0, 0, 1)",
-        textAlign: "left",
+        textAlign: "center",
         textAlignVertical: "top",
         letterSpacing: 0.1,
     },
     _Frame_27: {
         position: "absolute",
-        width: 146,
+        width: 145,
         height: 42,
         borderRadius: 0,
         overflow: "hidden",
@@ -5469,30 +5477,30 @@ const stylesheet = StyleSheet.create({
     },
     _Others: {
         position: "absolute",
-        // width: "auto",
-        height: "auto",
-        left: 48,
-        right: "auto",
-        top: 9,
-        bottom: "auto",
-        transform: [
-            { translateX: 0 },
-            { translateY: 0 },
-            { rotate: "0deg" },
-        ],
+        width: "100%",
+        height: "100%",
+        // left: 23,
+        // right: "auto",
+        // top: 9,
+        // bottom: "auto",
+        // transform: [
+        //     { translateX: 0 },
+        //     { translateY: 0 },
+        //     { rotate: "0deg" },
+        // ],
         fontFamily: "Montserrat",
         fontWeight: "400",
         textDecorationLine: "none",
         lineHeight: 24,
         fontSize: 16,
         color: "rgba(0, 0, 0, 1)",
-        textAlign: "left",
+        textAlign: "center",
         textAlignVertical: "top",
         letterSpacing: 0.1,
     },
     _Frame_21: {
         position: "absolute",
-        width: 148,
+        width: 145,
         height: 42,
         borderRadius: 0,
         overflow: "hidden",
@@ -5509,30 +5517,30 @@ const stylesheet = StyleSheet.create({
     },
     _Scheduled: {
         position: "absolute",
-        // width: "auto",
-        height: "auto",
-        left: 35,
-        right: "auto",
-        top: 9,
-        bottom: "auto",
-        transform: [
-            { translateX: 0 },
-            { translateY: 0 },
-            { rotate: "0deg" },
-        ],
+        width: "100%",
+        height: "100%",
+        // left: 23,
+        // right: "auto",
+        // top: 9,
+        // bottom: "auto",
+        // transform: [
+        //     { translateX: 0 },
+        //     { translateY: 0 },
+        //     { rotate: "0deg" },
+        // ],
         fontFamily: "Montserrat",
         fontWeight: "400",
         textDecorationLine: "none",
         lineHeight: 24,
         fontSize: 16,
         color: "rgba(0, 0, 0, 1)",
-        textAlign: "left",
+        textAlign: "center",
         textAlignVertical: "top",
         letterSpacing: 0.1,
     },
     _Frame_28: {
         position: "absolute",
-        width: 1027,
+        width: Dimensions.get("window").width - 360,
         height: 61,
         borderRadius: 0,
         overflow: "hidden",
@@ -5598,8 +5606,7 @@ const stylesheet = StyleSheet.create({
         height: 20,
         borderRadius: 0,
         overflow: "hidden",
-        left: 982,
-        right: "auto",
+        right: 10,
         top: 19,
         bottom: "auto",
         transform: [
@@ -5625,7 +5632,7 @@ const stylesheet = StyleSheet.create({
     },
     _Frame_30: {
         position: "absolute",
-        width: 1027,
+        width: Dimensions.get("window").width - 360,
         height: 61,
         borderRadius: 0,
         overflow: "hidden",
@@ -5691,8 +5698,7 @@ const stylesheet = StyleSheet.create({
         height: 20,
         borderRadius: 0,
         overflow: "hidden",
-        left: 982,
-        right: "auto",
+        right: 10,
         top: 19,
         bottom: "auto",
         transform: [
@@ -5718,7 +5724,7 @@ const stylesheet = StyleSheet.create({
     },
     _Frame_31: {
         position: "absolute",
-        width: 1027,
+        width: Dimensions.get("window").width - 360,
         height: 61,
         borderRadius: 0,
         overflow: "hidden",
@@ -5784,8 +5790,7 @@ const stylesheet = StyleSheet.create({
         height: 20,
         borderRadius: 0,
         overflow: "hidden",
-        left: 982,
-        right: "auto",
+        right: 10,
         top: 19,
         bottom: "auto",
         transform: [
@@ -5811,7 +5816,7 @@ const stylesheet = StyleSheet.create({
     },
     _Frame_29: {
         position: "absolute",
-        width: 1027,
+        width: Dimensions.get("window").width - 360,
         height: 61,
         borderRadius: 0,
         overflow: "hidden",
@@ -5877,8 +5882,7 @@ const stylesheet = StyleSheet.create({
         height: 20,
         borderRadius: 0,
         overflow: "hidden",
-        left: 982,
-        right: "auto",
+        right: 10,
         top: 19,
         bottom: "auto",
         transform: [
@@ -5904,7 +5908,7 @@ const stylesheet = StyleSheet.create({
     },
     _Line_3: {
         position: "absolute",
-        width: 1011,
+        width: Dimensions.get("window").width - 380,
         height: 0,
         borderRadius: undefined,
         borderWidth: 3,
@@ -6028,7 +6032,7 @@ const stylesheet = StyleSheet.create({
         position: "absolute",
         // width: "auto",
         height: "auto",
-        left: 462,
+        left: (Dimensions.get("window").width / 2) - 246,
         right: "auto",
         top: -9,
         bottom: "auto",
@@ -6056,7 +6060,7 @@ const stylesheet = StyleSheet.create({
         borderColor: "rgba(0, 0, 0, 1)",
         left: 28,
         right: "auto",
-        top: 97,
+        top: 65,
         bottom: "auto",
         transform: [
             { translateX: 0 },
@@ -6075,7 +6079,7 @@ const stylesheet = StyleSheet.create({
         borderColor: "rgba(0, 0, 0, 1)",
         left: 147,
         right: "auto",
-        top: 97,
+        top: 65,
         bottom: "auto",
         transform: [
             { translateX: 0 },
@@ -6091,7 +6095,7 @@ const stylesheet = StyleSheet.create({
         borderRadius: 0,
         left: 169,
         right: "auto",
-        top: 119,
+        top: 87,
         bottom: "auto",
         transform: [
             { translateX: 0 },
@@ -6105,7 +6109,7 @@ const stylesheet = StyleSheet.create({
         height: "auto",
         left: 45,
         right: "auto",
-        top: 104,
+        top: 70,
         bottom: "auto",
         transform: [
             { translateX: 0 },
@@ -11091,6 +11095,12 @@ const component__Phosphor_icons___ArrowCircleRight_stylesheet = StyleSheet.creat
             { rotate: "0deg" },
         ],
     },
+    _Pay_Button: {
+        width: 100,
+        height: 100,
+        right: 0,
+        position: 'absolute'
+    }
 });
 
 const imageUrl_Ellipse = "https://randomuser.me/api/portraits/men/5.jpg"
